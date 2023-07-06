@@ -1,0 +1,83 @@
+.navBar{
+    display: flex ;
+    flex-direction: row ;
+    align-items: center ;
+    gap: 150px !important;
+    margin-right: 40px;
+    nav{
+        div{
+            button{
+                background-color: #c1c1c3;
+            }
+            button:focus{
+                box-shadow: 0 0 10px black;
+            }
+        }
+    }
+
+    .div-carrito{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .carrito{
+            border: 2px solid rgba(0,0,0,0.8);
+            border-radius: 1em;          
+            color: #FFFAFB;
+            font-size: 20px;
+            padding: 15%;
+            background-color: #c1c1c3;
+            
+        }
+
+        div{
+            display: flex;
+            align-items: start;
+            flex-direction: row;
+            p{
+                font-family: "Lato", sans-serif;
+                font-size: 15px;
+                color: #FFFAFB;
+                margin: 0;
+            }
+
+            button{
+                color: #FFFAFB;
+            }
+        }
+    }
+}
+
+.bg-body-tertiary{
+    background-color: transparent !important;
+}
+
+.navBarTitulo{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    div{
+        color: rgb(85,10,33);
+        font-family: "Aboreto", cursive;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
+
+.navBarCuerpo{
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li{
+            font-family: "Lato", sans-serif;
+            margin-left: 10px;
+            font-size: 15px;
+            margin-bottom: 15px; 
+        }
+    }
+}
+
+.offcanva-fondo{
+    background: rgb(193,193,195);
+    background: linear-gradient(209deg, rgba(193,193,195,1) 31%, rgba(255,250,251,1) 63%);
+}
