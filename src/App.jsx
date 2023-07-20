@@ -1,10 +1,13 @@
 import './App.css';
 import {Header1} from './components/Header1/header';
-
+import { Descuentos } from './components/Descuentos/descuentos';
 
 function App() {
   return (
-    <Header1 />
+    <div>
+      <Header1 />
+      <Descuentos/>
+    </div>
   );
 }
 
