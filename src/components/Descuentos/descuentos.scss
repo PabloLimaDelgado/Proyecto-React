@@ -16,70 +16,66 @@
     .section1{
         display: flex;
         flex-direction: row;
-        
-        section{
-            gap: 10px;
-            border: none;
-            transition: transform 0.4s ease;
-            margin: 15px;
             .card{
                 transition: transform 0.4s ease;
-                border: none;
-                border-bottom: 1px solid rgba(193, 193, 195, 0.5);
-                display: flex;
-                align-items: center;
-                flex-direction: column;
                 transform-origin: center;
-                border-radius: 0px;
-                img{
-                    background: linear-gradient(209deg, rgb(193, 193, 195) 31%, rgb(255, 250, 251) 63%);
-                    padding: 2px;
-                }
-    
-                p{
-                    font-family: "Aboreto", cursive;
-                }
-    
-                h4{
-                    text-decoration: line-through;
-                    font-style: italic;
+                border: transparent 1px solid;
+                margin: 25px;
+
+
+                .section-img{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    transition: transform 0.4s ease;
+                    border: transparent 1px solid;
+                    img{
+                        background: linear-gradient(209deg, rgb(193, 193, 195) 31%, rgb(255, 250, 251) 63%);
+                        padding: 2px;
+                    }
+        
+                    p{
+                        font-family: "Aboreto", cursive;
+                    }
+        
+                    h4{
+                        text-decoration: line-through;
+                        font-style: italic;
+                        border-bottom: 1px solid rgba(193, 193, 195, 0.5);
+                        border-radius: 0px;
+                    }
+
+                    .p-carrito{
+                        display: flex;
+                        align-self: start;
+                        margin: 0px;
+                        font-family: "Lato", sans-serif;
+                        font-size: 16px;
+                    }
+        
+                    button{
+                        display: flex;
+                        align-self: end;
+                        border-radius: 22px;
+                        border: 1px solid black;
+                        padding: 0px 10px;
+                        cursor: pointer;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 300;
+                        color: #FFFAFB;
+                        font-style: italic;
+                        background: linear-gradient(209deg,  rgba(85,10,33,1) 80%, rgba(45,14,14,1) 100%);
+                    }
                 }
             }
-            
-            .buttonAparece{
-                display: flex;
-                flex-direction: column;
-                padding: 4px;
-                p{
-                    display: flex;
-                    align-self: start;
-                    margin: 0px;
-                    font-family: "Lato", sans-serif;
-                    font-size: 16px;
-                }
-    
-                button{
-                    display: flex;
-                    align-self: end;
-                    border-radius: 22px;
-                    border: 1px solid black;
-                    padding: 0px 10px;
-                    cursor: pointer;
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 300;
-                    color: #FFFAFB;
-                    font-style: italic;
-                    background: linear-gradient(209deg,  rgba(85,10,33,1) 80%, rgba(45,14,14,1) 100%);
+            .card:hover{
+                transform: scale(1.1);
+                border: 1px solid #c1c1c3;
+                .section-img{
+                    transform: scale(0.9091);
                 }
             }
         }
     }
 
-    section:hover{
-        transform: scale(1.1);
-        border: 1px solid #c1c1c3;
-        .card{
-            transform: scale(0.9091);
-        }
-    }
-}
+

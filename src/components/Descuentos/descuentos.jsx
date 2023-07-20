@@ -2,17 +2,8 @@ import './descuentos.scss';
 import imagenes from '../../assets/imagenes';
 import { useState } from 'react';
 
-const Card = ({img, precio, nombre}) => {
-    return(
-        <div className='card'>
-                <img src={img}/>
-                <p>{nombre}</p>
-                <h4>${precio}</h4>
-        </div>
-    )
-}
 
-export const Descuentos = () => {
+const Card = ({img, precio, nombre, descuento}) => {
     const [showButton, setShowButton] = useState(false);
     
     const handleMouseEnter = () => {
@@ -22,43 +13,46 @@ export const Descuentos = () => {
     const handleMouseLeave = () => {
         setShowButton(false)
     }
+    return(
+        <div className='card'>
+            <section 
+            className='section-img'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            >
+                <img src={img}/>
+                <p>{nombre}</p>
+                <h4>${precio}</h4>
+
+                {showButton && <p className='p-carrito'>{descuento}% de descuento</p>}
+                {showButton && <button>Ver producto</button>}
+            </section>
+        </div>
+
+    )
+}
+
+export const Descuentos = () => {
     return (
         <div className="descuentos">
             <h3>Descuentos</h3>
 
             <section className='section1'>
-            <section
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
                 <Card 
                     img = { imagenes[0].img }
                     nombre = {"Remera coco Negra"}
                     precio= {4500}
+                    descuento={40}
                 />
 
-                <div className='buttonAparece'>
-                    {showButton && <p>40% de descuento</p>}
-                    {showButton && <button>Comprar</button>}
-                </div>
-            </section>
-
-            <section
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
                 <Card 
                     img = { imagenes[1].img }
-                    nombre = {"Remera coco Negra"}
-                    precio= {4500}
+                    nombre = {"Pantalon Social Tourist"}
+                    precio= {3200}
+                    descuento={60}
                 />
-
-                <div className='buttonAparece'>
-                    {showButton && <p>40% de descuento</p>}
-                    {showButton && <button>Comprar</button>}
-                </div>
-            </section>
             </section>
         </div>
     )
 }
+
