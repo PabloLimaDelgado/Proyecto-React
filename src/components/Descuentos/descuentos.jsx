@@ -1,5 +1,5 @@
 import './descuentos.scss';
-import imagenes from '../../assets/imagenes';
+import imagenes from '../../lib/imagenes';
 import { useState } from 'react';
 
 

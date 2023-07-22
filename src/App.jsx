@@ -1,14 +1,10 @@
 import './App.css';
-import {Header1} from './components/Header1/header';
-import { Descuentos } from './components/Descuentos/descuentos';
-import { ItemDetailContainer } from './components/ItemDetailContainer/itemDetailContainer';
-
+import { NavBar, ItemCount, ItemListContainer, Item } from "./components";
+import { MainPage } from './pages/MainPage';
 function App() {
   return (
     <div>
-      <Header1 />
-      <Descuentos/>
-      <ItemDetailContainer />
+      <MainPage/>
     </div>
   );
 }
