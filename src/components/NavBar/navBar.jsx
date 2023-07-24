@@ -68,10 +68,10 @@ export const NavBar = () => {
 
                                 <Offcanvas.Body className='navBarCuerpo'>
                                     <Nav className="justify-content-end flex-grow-1 pe-3">
-                                        <Item nombre="Remeras & camisas"/>
-                                        <Item nombre="Pantalones & mallas"/>
-                                        <Item nombre="Ropa interior"/>
-                                        <Item nombre="Locales"/>
+                                        <Item nombre="Remeras"/>
+                                        <Item nombre="Camisas"/>
+                                        <Item nombre="Pantalones"/>
+                                        <Item nombre="Trajes de baño"/>
                                     </Nav>
                                 </Offcanvas.Body>
                             </Navbar.Offcanvas>

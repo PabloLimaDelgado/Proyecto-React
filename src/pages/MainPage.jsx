@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { getRopas } from "../lib/ropa.request";
-import { ItemListContainer } from "../components";
+import { ItemListContainer } from "../components/ItemListContainer/ItemListContainer";
 
 export const MainPage = () => {
   
     const [products, setProducts] = useState([]); 
     const [isLoading, setIsLoading] = useState(true);
-    //Poner en efectos peticiones o cosas asincronas
     useEffect(() => {
   
      getRopas() //Se simula una peticion
@@ -23,8 +22,7 @@ export const MainPage = () => {
     return (
       <div>
         <div className="container">
-          <h5>{isLoading ? "Cargando ..." : "Listo"}</h5>
-          <ItemListContainer products={products} />
+          <ItemListContainer isLoading={isLoading} products={products} />
         </div>
       </div>
     );

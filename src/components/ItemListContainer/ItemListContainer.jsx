@@ -1,16 +1,27 @@
+import React from "react";
 import { Item } from "../Item/Item";
+import './ItemListContainer.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
-export const ItemListContainer = ({ products }) => (
-    <div className="item-list">
-      {products.map((product) => (
-        <Item
-          key={product.id}
-          // Normal
-          img={product.img}
-          descripcion={product.descripcion}
-          price={product.price}
-          // {...product}
-        />
-      ))}
-    </div>
+export const ItemListContainer = ({ isLoading, products }) =>  {
+  if (isLoading) {
+    return <FontAwesomeIcon icon={faSpinner} className="spinner" spin />; // Si está cargando, muestra el spinner
+  }
+
+  return (
+    <section className="item-list-container">
+      <h3>Descuentos</h3>
+      <div className="item-list">
+        {products.map((product) => (
+          <Item
+            key={product.id}
+            img={product.img}
+            nombre={product.nombre}
+            price={product.price}
+          />
+        ))}
+      </div>
+    </section>
   );
+}
