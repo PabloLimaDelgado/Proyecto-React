@@ -11,15 +11,15 @@ export const DetailProduct = () => {
       getROPA(+id).then((res) => {
         setRopa(res);
       });
-    }, [id]);
+    }, []);
   
-    if (!ropa) return <div>Cargando...</div>; // renderizando un mensaje de carga
+    if(!Object.keys(ropa).length) return // renderizando un mensaje de carga
   
     return (
       <div>
         <div>
           <div>
-            <img src={ropa.img} alt={ropa.nombre} />
+            <img src={ropa.img}/>
           </div>
           <div>
             <span>{ropa.nombre} </span>

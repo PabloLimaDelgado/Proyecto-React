@@ -22,7 +22,8 @@ const ROPA = [
       "id" : 1,
       "price" : 3300,
       "descuento" : 40,
-      "nombre" : "Remera manga larga Coco"
+      "nombre" : "Remera manga larga Coco",
+      "categoria" : "Remeras"
     },
     {
       "img": social_tourist220x350,
@@ -30,7 +31,8 @@ const ROPA = [
       "id" : 2,
       "price" : 4000,
       "descuento " : 60,
-      "nombre" : "Pantalon corto Royaura"
+      "nombre" : "Pantalon corto Royaura",
+      "categoria" : "Pantalones"
     },
     {
       "img": royaura_amarilla,
@@ -38,7 +40,8 @@ const ROPA = [
       "id" : 3,
       "price" : 8500,
       "descuento " : 20,
-      "nombre" : "Camisa Royaura"
+      "nombre" : "Camisa Royaura",
+      "categoria" : "Camisas"
     },
     {
       "img": malla_tascani,
@@ -46,7 +49,8 @@ const ROPA = [
       "id" : 4,
       "price" : 3800,
       "descuento " : 50,
-      "nombre" : "Traje de baño Tascani"
+      "nombre" : "Traje de baño Tascani",
+      "categoria" : "TrajeDeBaño"
     },
     {
       "img": topshop_rosado,
@@ -54,7 +58,8 @@ const ROPA = [
       "id" : 5,
       "price" : 6000,
       "descuento " : 10,
-      "nombre" : "Pantalon TopShop"
+      "nombre" : "Pantalon TopShop",
+      "categoria" : "Pantalones"
     },
     {
       "img": rowne_crema,
@@ -62,7 +67,8 @@ const ROPA = [
       "id" : 6,
       "price" : 2000,
       "descuento " : 15,
-      "nombre" : "Remera manga corta Rowne"
+      "nombre" : "Remera manga corta Rowne",
+      "categoria" : "Remeras"
     },
     {
       "img": shein_lisa,
@@ -70,7 +76,8 @@ const ROPA = [
       "id" : 7,
       "price" : 1500,
       "descuento " : 15,
-      "nombre" : "Remera manga corta Shein"
+      "nombre" : "Remera manga corta Shein",
+      "categoria" : "Remeras"
     },
     {
       "img": newChic_camuflado,
@@ -78,7 +85,8 @@ const ROPA = [
       "id" : 8,
       "price" : 9000,
       "descuento " : 20,
-      "nombre" : "Camisa NewChic"
+      "nombre" : "Camisa NewChic",
+      "categoria" : "Camisas"
     },
     {
       "img": manki_bage,
@@ -86,7 +94,8 @@ const ROPA = [
       "id" : 9,
       "price" : 3500,
       "descuento " : 60,
-      "nombre" : "Pantalon corto Manki"
+      "nombre" : "Pantalon corto Manki",
+      "categoria" : "Pantalones"
     },
     {
       "img": stylish_oscuro,
@@ -94,7 +103,8 @@ const ROPA = [
       "id" : 10,
       "price" : 5500,
       "descuento " : 10,
-      "nombre" : "Pantalon largo Stylish"
+      "nombre" : "Pantalon largo Stylish",
+      "categoria" : "Pantalones"
     },
     {
       "img": shopStyle_negro,
@@ -102,7 +112,8 @@ const ROPA = [
       "id" : 11,
       "price" : 4000,
       "descuento " : 40,
-      "nombre" : "Ropa de baño ShopStile"
+      "nombre" : "Ropa de baño ShopStile",
+      "categoria" : "TrajeDeBaño"
     },
     {
       "img": blanc_shein,
@@ -110,7 +121,8 @@ const ROPA = [
       "id" : 12,
       "price" : 3000,
       "descuento " : 50,
-      "nombre" : "Remera manga larga Shein"
+      "nombre" : "Remera manga larga Shein",
+      "categoria" : "Remeras"
     },
     {
       "img": tascani_camisa,
@@ -118,7 +130,8 @@ const ROPA = [
       "id" : 13,
       "price" : 10000,
       "descuento " : 20,
-      "nombre" : "Camisa Tascani"
+      "nombre" : "Camisa Tascani",
+      "categoria" : "Camisas"
     },
     {
       "img": stylish_naranja,
@@ -126,7 +139,8 @@ const ROPA = [
       "id" : 14,
       "price" : 5500,
       "descuento " : 10,
-      "nombre" : "Pantalon Largo Stylish"
+      "nombre" : "Pantalon Largo Stylish",
+      "categoria" : "Pantalones"
     },
     {
       "img": shein_morning,
@@ -134,7 +148,8 @@ const ROPA = [
       "id" : 15,
       "price" : 1500,
       "descuento " : 15,
-      "nombre" : "Remera manga corta Shein"
+      "nombre" : "Remera manga corta Shein",
+      "categoria" : "Remeras"
     },
     {
       "img": negra_shein,
@@ -142,14 +157,15 @@ const ROPA = [
       "id" : 16,
       "price" : 1500,
       "descuento " : 15,
-      "nombre" : "Remera manga larga Shein"
+      "nombre" : "Remera manga larga Shein",
+      "categoria" : "Remeras"
     },
   ];
   
 
   export const getRopas = (id) => {
     const _ropa = id
-      ? ROPA.filter((ropa) => ropa.category.toLowerCase() === id)
+      ? ROPA.filter((ropa) => ropa.categoria.toLowerCase() === id)
       : ROPA;
   
     return new Promise((res) => {

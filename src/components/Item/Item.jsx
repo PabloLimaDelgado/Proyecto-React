@@ -1,7 +1,9 @@
 import React from 'react';
 import './Item.scss';
 import { useState } from 'react';
-export const Item = ({ img, price, nombre }) => {
+import { useNavigate } from "react-router-dom";
+
+export const Item = ({ img, price, nombre, id }) => {
     const [showButton, setShowButton] = useState(false);
     
     const handleMouseEnter = () => {
@@ -12,7 +14,7 @@ export const Item = ({ img, price, nombre }) => {
         setShowButton(false)
     }
 
-
+    const navigate = useNavigate();
   return (
     <div className="descuentos"
         onMouseEnter={handleMouseEnter}
@@ -30,7 +32,7 @@ export const Item = ({ img, price, nombre }) => {
                 maximumFractionDigits: 2,
               })}
             </h4>
-            {showButton && <button>Ver producto</button>}
+            {showButton && <button  onClick={() => navigate(`/item/${id}`)}>Ver producto</button>}
           </div>
         </div>
       </section>
