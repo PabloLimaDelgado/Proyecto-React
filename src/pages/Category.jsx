@@ -12,18 +12,22 @@ export const Category = () => {
     const [isLoading, setIsLoading] = useState(true);
     
     useEffect(() => {
-  
+    setIsLoading(true)
      getRopas(id) 
       .then(res => {
         setIsLoading(false); 
-        setProducts(res)} 
-        ) 
+        setProducts(res)
+      }) 
     }, [id]);
+
+    if (isLoading) {
+      return isLoading ? (<FontAwesomeIcon icon={faSpinner} className="spinner" spin />) : (<div><ItemListContainer products={products} /></div>)
+    }
 
     return (
       <div>
         <div className="container">
-        <>{isLoading ? <FontAwesomeIcon icon={faSpinner} className="spinner" spin /> : <ItemListContainer products={products} />}</>
+          <ItemListContainer products={products} />
         </div>
       </div>
     );

@@ -3,18 +3,24 @@ import { ItemCount } from "../../components/ItemCount/ItemCount";
 import { getROPA } from "../../lib/ropa.request";
 import { useParams } from "react-router-dom";
 import './DetailProduct.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 export const DetailProduct = () => {
     const { id } = useParams();
     const [ropa, setRopa] = useState({});
-  
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
       getROPA(+id).then((res) => {
+        setIsLoading(false);
         setRopa(res);
       });
     }, []);
-  
-    if(!Object.keys(ropa).length) return // renderizando un mensaje de carga
+
+    if (isLoading) {
+      return <FontAwesomeIcon icon={faSpinner} className="spinner" spin />
+    }
   
     const precioDescuento = ropa.price - (ropa.price * ropa.descuento / 100);
     return (

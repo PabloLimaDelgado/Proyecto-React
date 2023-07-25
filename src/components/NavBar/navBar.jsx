@@ -11,7 +11,6 @@ import { faHorse } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 import { NavLink, Outlet } from "react-router-dom";
-import { Component } from 'react';
 
 
 const Item = ({nombre}) => {
@@ -20,8 +19,9 @@ const Item = ({nombre}) => {
     )
 }
 
-export const NavBar = () => {
+export const NavBar = ({data}) => {
     const [count, setCount] = useState(0)
+    const [searchTerm, setSearchTerm] = useState("");
 
     const handleCount = () => {
         setCount(count + 1)
@@ -41,6 +41,8 @@ export const NavBar = () => {
                         <input 
                         type="text" 
                         placeholder='Buscar producto'
+                        value={searchTerm}
+                        onChange={(event) => setSearchTerm(event.target.value)}
                         />
                         <button>
                             <FontAwesomeIcon icon={faMagnifyingGlass} className='lupa'/>
