@@ -1,7 +1,7 @@
 import React from 'react';
 import './Item.scss';
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Item = ({ img, price, nombre, id }) => {
     const [showButton, setShowButton] = useState(false);
@@ -32,7 +32,13 @@ export const Item = ({ img, price, nombre, id }) => {
                 maximumFractionDigits: 2,
               })}
             </h4>
-            {showButton && <button  onClick={() => navigate(`/item/${id}`)}>Ver producto</button>}
+            {showButton && 
+            <NavLink
+            to = {`/item/${id}`}
+            >
+              <button>Ver producto</button>
+            </NavLink>
+            }
           </div>
         </div>
       </section>

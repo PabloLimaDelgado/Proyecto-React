@@ -27,7 +27,7 @@ export const Category = () => {
     return (
       <div>
         <div className="container">
-          <ItemListContainer products={products} />
+          <ItemListContainer isLoading={isLoading} products={products} />
         </div>
       </div>
     );

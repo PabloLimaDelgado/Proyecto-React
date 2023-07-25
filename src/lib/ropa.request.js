@@ -176,7 +176,7 @@ const ROPA = [
   };
   
   export const getROPA = (id) => {
-    const ropa = ROPA.filter((ropa) => ropa.id === id)[0];
+    const ropa = ROPA.find((ropa) => ropa.id == parseInt(id))
   
     return new Promise((res) => {
       setTimeout(() => {
