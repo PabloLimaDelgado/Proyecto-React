@@ -11,6 +11,7 @@ import { faHorse } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 import { NavLink, Outlet } from "react-router-dom";
+import { Component } from 'react';
 
 
 const Item = ({nombre}) => {
@@ -24,8 +25,7 @@ export const NavBar = () => {
 
     const handleCount = () => {
         setCount(count + 1)
-      }
-    
+    }
     return (
         <>
             <header className='header1'>
@@ -38,7 +38,10 @@ export const NavBar = () => {
                     </div>
 
                     <div className='div-input'>
-                        <input type="text" placeholder='Buscar producto'/>
+                        <input 
+                        type="text" 
+                        placeholder='Buscar producto'
+                        />
                         <button>
                             <FontAwesomeIcon icon={faMagnifyingGlass} className='lupa'/>
                         </button>

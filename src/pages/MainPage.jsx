@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { getRopas } from "../lib/ropa.request";
 import { ItemListContainer } from "../components/ItemListContainer/ItemListContainer";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 export const MainPage = () => {
   
@@ -15,15 +17,13 @@ export const MainPage = () => {
         
         ) 
   
-    }, []);
-  
-  
-  
+    }, [])
     return (
       <div>
         <div className="container">
-          <ItemListContainer isLoading={isLoading} products={products} />
+          <>{isLoading ? <FontAwesomeIcon icon={faSpinner} className="spinner" spin /> : <ItemListContainer products={products}/>}</> 
         </div>
       </div>
     );
   };
+
