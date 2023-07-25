@@ -7,8 +7,7 @@ import {
 import './App.css';
 import { NavBar } from './components/NavBar/navBar';
 import { MainPage } from './pages/MainPage';
-import { ItemCount } from './components/ItemCount/ItemCount';
-import { DetailProduct } from './pages/DetailProduct';
+import { DetailProduct } from './pages/DetailProduct/DetailProduct';
 import { Category } from "./pages/Category";
 
 const routes = createBrowserRouter(

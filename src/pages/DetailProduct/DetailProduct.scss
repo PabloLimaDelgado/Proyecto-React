@@ -1,0 +1,56 @@
+.DetailProduct {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 5px;
+    .divFotos{
+        display: flex;
+        img {
+            background: linear-gradient(209deg, rgb(193, 193, 195) 31%, rgb(255, 250, 251) 63%);
+        }
+    }
+
+    .divResto{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 10px;
+
+        .nombre{
+            font-family: "Aboreto", cursive;
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        .descripcion{
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+        }
+
+        .precio-original{
+            display: flex;
+            flex-direction: row;
+            font-family: "Lato", sans-serif;
+            gap: 10px;
+            font-size: 1.2em;
+            p{
+                font-family: "Montserrat", sans-serif;
+                text-decoration: line-through;
+            }
+        }
+
+        .precio-descontado{
+            display: flex;
+            flex-direction: row;
+            font-family: "Lato", sans-serif;
+            gap: 10px;
+            font-size: 1.2em;
+            p{
+                font-family: "Montserrat", sans-serif;
+            }
+        }
+    }
+}

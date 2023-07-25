@@ -1,9 +1,9 @@
 import React from 'react';
 import './Item.scss';
 import { useState } from 'react';
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export const Item = ({ img, price, nombre, id }) => {
+export const Item = ({ img, price, nombre, id, descuento }) => {
     const [showButton, setShowButton] = useState(false);
     
     const handleMouseEnter = () => {
@@ -13,8 +13,6 @@ export const Item = ({ img, price, nombre, id }) => {
     const handleMouseLeave = () => {
         setShowButton(false)
     }
-
-    const navigate = useNavigate();
   return (
     <div className="descuentos"
         onMouseEnter={handleMouseEnter}
@@ -32,13 +30,17 @@ export const Item = ({ img, price, nombre, id }) => {
                 maximumFractionDigits: 2,
               })}
             </h4>
-            {showButton && 
-            <NavLink
-            to = {`/item/${id}`}
-            >
-              <button>Ver producto</button>
-            </NavLink>
-            }
+
+            <div className='aparece'>
+              {showButton && <p>{descuento}%</p>}
+              {showButton && 
+              <NavLink
+              to = {`/item/${id}`}
+              >
+                <button>Ver producto</button>
+              </NavLink>
+              }
+            </div>
           </div>
         </div>
       </section>

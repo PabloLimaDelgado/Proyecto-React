@@ -16,13 +16,12 @@ export const Category = () => {
       .then(res => {
         setIsLoading(false); 
         setProducts(res)} 
-        
         ) 
     }, [id]);
   
     if (isLoading) {
-        return <FontAwesomeIcon icon={faSpinner} className="spinner" spin />; // Si está cargando, muestra el spinner
-      }
+      return <FontAwesomeIcon icon={faSpinner} className="spinner" spin />;
+    }
 
     return (
       <div>

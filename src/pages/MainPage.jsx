@@ -8,10 +8,10 @@ export const MainPage = () => {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
   
-     getRopas() //Se simula una peticion
+     getRopas()
       .then(res => {
-        setIsLoading(false); //Cuando esta se resuelve cambia al estado para dejar de cargar
-        setProducts(res)} //Ademas setea productos con lo que resolvio la promesa (no hay catch porque estamos segurods de que siempre hay algo)
+        setIsLoading(false);
+        setProducts(res)}
         
         ) 
   

@@ -15,10 +15,11 @@ export const ItemListContainer = ({ isLoading, products }) =>  {
       <div className="item-list">
         {products.map((product) => (
           <Item
-            key={product.id}
+            id={product.id}
             img={product.img}
             nombre={product.nombre}
             price={product.price}
+            descuento={product.descuento}
           />
         ))}
       </div>
