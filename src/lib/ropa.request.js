@@ -53,7 +53,7 @@ const ROPA = [
       price: 3800,
       descuento: 50,
       nombre: "Traje de baño Tascani",
-      categoria: "TrajeDeBaño",
+      categoria: "Mallas",
       stock: 9
     },
     {
@@ -123,7 +123,7 @@ const ROPA = [
       price: 4000,
       descuento: 40,
       nombre: "Ropa de baño ShopStile",
-      categoria: "TrajeDeBaño",
+      categoria: "Mallas",
       stock: 20
     },
     {

@@ -7,7 +7,6 @@ export const ItemListContainer = ({products }) =>  {
 
   return (
     <section className="item-list-container">
-      <h3>Descuentos</h3>
       <div className="item-list">
         {products.map((product) => (
           <Item

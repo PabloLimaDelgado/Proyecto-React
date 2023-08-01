@@ -80,37 +80,6 @@
                 }
             }
         }
-    
-        .div-carrito{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .carrito{
-                border: 2px solid rgba(0,0,0,0.8);
-                border-radius: 1em;          
-                color: #FFFAFB;
-                font-size: 20px;
-                padding: 15%;
-                background-color: #c1c1c3;
-                
-            }
-    
-            div{
-                display: flex;
-                align-items: start;
-                flex-direction: row;
-                p{
-                    font-family: "Lato", sans-serif;
-                    font-size: 15px;
-                    color: #FFFAFB;
-                    margin: 0;
-                }
-    
-                button{
-                    color: #FFFAFB;
-                }
-            }
-        }
     }
 }
 

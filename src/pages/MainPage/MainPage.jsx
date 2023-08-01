@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { getRopas } from "../lib/ropa.request";
-import { ItemListContainer } from "../components/ItemListContainer/ItemListContainer";
+import { getRopas } from "../../lib/ropa.request";
+import { ItemListContainer } from "../../components/ItemListContainer/ItemListContainer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-
+import './MainPage.scss'
 export const MainPage = () => {
   
     const [products, setProducts] = useState([]); 
@@ -24,6 +24,7 @@ export const MainPage = () => {
     return (
       <div>
         <div className="container">
+          <h3>Descuentos</h3>
           <ItemListContainer products={products} />
         </div>
       </div>

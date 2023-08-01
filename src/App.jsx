@@ -6,9 +6,12 @@ import {
 } from "react-router-dom";
 import './App.css';
 import { NavBar } from './components/NavBar/navBar';
-import { MainPage } from './pages/MainPage';
+import { MainPage } from './pages/MainPage/MainPage';
 import { DetailProduct } from './pages/DetailProduct/DetailProduct';
-import { Category } from "./pages/Category";
+import { Category } from "./pages/Category/Category";
+import { CartProvider } from "./state/Cart.context";
+import { ThemeProvider } from "./state/Theme.context";
+import { Cart } from "./pages/Cart/Cart";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +20,7 @@ const routes = createBrowserRouter(
         <Route path="/" element={<MainPage />} />
          <Route path="/item/:id" element={<DetailProduct />} />
          <Route path="/categoria/:id" element={<Category />} />
+         <Route path="/cart" element={<Cart />} />
 
     </Route>
   )
@@ -25,8 +29,12 @@ const routes = createBrowserRouter(
 function App() {
   return (
     <div>
-      <RouterProvider router={routes} />
-    </div>
+      <ThemeProvider>
+        <CartProvider>
+          <RouterProvider router={routes} />
+        </CartProvider>
+      </ThemeProvider>
+  </div>
   );
 }
 

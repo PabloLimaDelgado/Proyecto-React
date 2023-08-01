@@ -6,6 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
+import { CartWidget } from '../CartWIdget/CartWidget';
 
 import { faHorse } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
@@ -20,12 +21,6 @@ const Item = ({nombre}) => {
 }
 
 export const NavBar = ({data}) => {
-    const [count, setCount] = useState(0)
-    const [searchTerm, setSearchTerm] = useState("");
-
-    const handleCount = () => {
-        setCount(count + 1)
-    }
     return (
         <>
             <header className='header1'>
@@ -41,8 +36,6 @@ export const NavBar = ({data}) => {
                         <input 
                         type="text" 
                         placeholder='Buscar producto'
-                        value={searchTerm}
-                        onChange={(event) => setSearchTerm(event.target.value)}
                         />
                         <button>
                             <FontAwesomeIcon icon={faMagnifyingGlass} className='lupa'/>
@@ -50,15 +43,7 @@ export const NavBar = ({data}) => {
                     </div>
 
                     <div className="navBar">
-                        <div className='div-carrito'>
-                            <FontAwesomeIcon icon={faCartShopping} className='carrito'/>
-                            <div>
-                                <p>Mi carrito,</p>
-                                <button onClick={() => handleCount()}>
-                                    {count}
-                                </button>
-                            </div>
-                        </div>
+                    <CartWidget/>
 
                         <>
                             <Navbar expand={false} className="bg-body-tertiary mb-3">
@@ -105,12 +90,12 @@ export const NavBar = ({data}) => {
                                                 </NavLink>
 
                                                 <NavLink
-                                                 to={"/categoria/trajedebaño"}
+                                                 to={"/categoria/mallas"}
                                                  style={({ isActive }) => ({
                                                     color: isActive ? "rgb(85,10,33)" : "black",
                                                   })}
                                                  >
-                                                    <Item nombre="Trajes de baño"/>
+                                                    <Item nombre="Mallas"/>
                                                 </NavLink>
                                             </Nav>
                                         </Offcanvas.Body>
