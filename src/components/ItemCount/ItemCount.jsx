@@ -22,7 +22,7 @@ export const ItemCount = ({ stock = 0, onAdd }) => {
             <button onClick={() => handleSum()}>+</button>
           </div>
           <button
-            disabled={stock}
+            disabled={!stock}
             onClick={() => {
               onAdd(count);
               setCount(1);

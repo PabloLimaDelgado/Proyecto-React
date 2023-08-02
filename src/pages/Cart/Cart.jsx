@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useCartContext } from "../state/Cart.context";
+import { useCartContext } from "../../state/Cart.context";
 import { AiOutlineDelete } from "react-icons/ai";
 export const Cart = () => {
   const { cart, cleanCart, getTotalPrice, removeProduct } = useCartContext();
@@ -10,7 +10,7 @@ export const Cart = () => {
 
   return (
     <div className="cart">
-        
+        <span>Total {getTotalPrice().toLocaleString("es.CO")}</span>
     </div>
   );
 };

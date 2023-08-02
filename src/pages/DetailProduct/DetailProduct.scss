@@ -52,5 +52,26 @@
                 font-family: "Montserrat", sans-serif;
             }
         }
+
+        .cant {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2em;
+            color: black; 
+            font-style: italic; 
+            margin-top: 10px; 
+            display: flex;
+            flex-direction: row; // Asegurarse de que los elementos estén en la misma línea.
+            align-items: center; // Centrar verticalmente los elementos en la línea.
+            justify-content: center;
+            align-self: center;
+
+            p{
+                font-size: 1.3em;
+                font-weight: bold;
+                color: rgb(85, 10, 33);
+                margin-bottom: 0px;
+                margin-left: 5px;
+            }
+        }
     }
 }
