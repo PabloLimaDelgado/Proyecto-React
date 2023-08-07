@@ -4,12 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
 import { CartWidget } from '../CartWIdget/CartWidget';
-
+import { SearchBar } from '../SearchBar/SearchBar';
 import { faHorse } from '@fortawesome/free-solid-svg-icons'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+
 
 import { NavLink, Outlet } from "react-router-dom";
 
@@ -32,19 +30,13 @@ export const NavBar = ({data}) => {
                         <h1>Cheval Marché</h1>
                     </div>
 
-                    <div className='div-input'>
-                        <input 
-                        type="text" 
-                        placeholder='Buscar producto'
-                        />
-                        <button>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} className='lupa'/>
-                        </button>
+                    <div>
+                        <SearchBar/>
                     </div>
 
                     <div className="navBar">
-                    <CartWidget/>
 
+                        <NavLink to={"/cart"}><CartWidget/></NavLink>
                         <>
                             <Navbar expand={false} className="bg-body-tertiary mb-3">
                                 <Container fluid>

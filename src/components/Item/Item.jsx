@@ -25,7 +25,7 @@ export const Item = ({ img, price, nombre, id, descuento }) => {
             <p>{nombre}</p>
             <h4>
               $
-              {price.toLocaleString("es-MX", {
+              {Number(price).toLocaleString("es-MX", {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2,
               })}

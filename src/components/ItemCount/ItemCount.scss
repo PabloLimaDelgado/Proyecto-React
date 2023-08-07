@@ -33,4 +33,31 @@
             font-family: 'Montserrat', sans-serif;
         }
     }
+
+    button {
+        font-family: 'Aboreto', cursive;
+        font-weight: bolder;
+        font-size: 1em;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 22px;
+        color: rgb(26, 4, 10);
+        background-color: #c1c1c3;
+    }
+
+    h5{
+        display: flex;
+        flex-direction: row;
+        font-family: "Lato", sans-serif;
+        font-size: 1.3em;
+        font-style: italic;
+        align-items: center; // Centrar verticalmente los elementos en la línea.
+        p{
+            color: rgb(85, 10, 33);
+            font-size: 1.3em;
+            font-weight: bolder;
+            font-family: "Lato", sans-serif;
+        }
+    }
 }

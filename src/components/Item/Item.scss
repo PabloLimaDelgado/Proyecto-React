@@ -25,6 +25,7 @@
       margin-bottom: 25px;
       margin-top: 25px;
       height: 460px;
+      background-color: #fffafb;
 
       .section-img {
         display: flex;
@@ -80,8 +81,9 @@
     .card:hover {
       transform: scale(1.1);
       border: 1px solid #c1c1c3;
+      background-color: #fffafb;
       .section-img {
-        transform: scale(0.9091);
+        transform: scale(0.90909090909);
       }
     }
   }

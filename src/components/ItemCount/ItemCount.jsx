@@ -32,7 +32,7 @@ export const ItemCount = ({ stock = 0, onAdd }) => {
           </button>
         </>
       ) : (
-        <h5>Tienes todo en el carrito</h5>
+        <h5><p>¡</p> No hay mas productos <p>!</p></h5>
       )}
   </div>
 

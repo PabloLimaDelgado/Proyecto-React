@@ -1,0 +1,36 @@
+.div-input{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    input{
+        border-radius: 0.5 * 44px;
+        outline: none;
+        background-color: #c1c1c3;
+        width: 500px;
+        border: 1px solid black;
+        color: rgb(26, 4, 10);
+        font-family: "Aboreto", cursive;
+        font-weight: bolder;
+        padding: 1%;
+    }
+    input:focus{
+        box-shadow: 0 0 10px black;
+    }
+
+    input::placeholder{ 
+        border: 0px;
+        color: rgb(26, 4, 10);
+        font-family: "Aboreto", cursive;
+        font-weight: bolder;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        .lupa{
+            color: #c1c1c3;
+            font-size: 20px;
+        }
+    }
+}
