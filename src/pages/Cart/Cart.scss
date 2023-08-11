@@ -3,74 +3,152 @@
     display: flex;
     justify-content: center;
     background-color: #fffafb;
+    align-items: center;
 
-    .vaciar-carrito {
+    div{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    section{
+        display: flex;
+        flex: 1 0 auto;
+        align-items: center;
+        flex-direction: column;
+        .vaciar-carrito {
+            width: 60%;
+            align-items: center;
+            button {
+                font-family: 'Aboreto', cursive;
+                font-weight: bolder;
+                font-size: 1.2em;
+                width: 100%;
+                border-radius: 22px;
+                color: rgb(26, 4, 10);
+                background-color: #c1c1c3;
+                margin-bottom: 1.5em;
+            }
+        }
+      
+        .lista-productos {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            align-items: center;
+      
+            .producto {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 5px;
+                padding: 0.5em;
+                border-bottom: 1px solid rgba(193, 193, 195, 0.5);
+    
+                img{
+                    background: linear-gradient(209deg, rgb(193, 193, 195) 31%, rgb(255, 250, 251) 63%);
+                    padding: 2px;
+                    margin: 10px;
+                    border: 1px solid black;
+                }
+    
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+    
+                    span {
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 400;
+                        font-size: 1.2em;
+                    }
+              
+                    .subtotal {
+                        font-family: 'Montserrat', sans-serif;
+                    }
+    
+                    button{
+                        width: 22%;
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }
+      
+        .total {
+          display: flex;
+          justify-content: space-between;
+          font-family: 'Lato', sans-serif;
+          font-size: 1.5em;
+          font-weight: bold;
+          padding-left: 1em;
+          padding-right: 1em;
+          width: 60%;
+          align-items: center;
+          span {
+            font-family: 'Montserrat', sans-serif;
+          }
+        }
+    }
+    .form {
+        width: 20%; // Ancho automático.
+        position: sticky; // Hace que el elemento se adhiera a una posición.
+        top: 4em;
+        height: 50%;
+        margin: 2em;
+        border: #c3c3c3 1px solid;
+        border-radius: 15px;
+        padding: 0.5em;
+    
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            width: 100%;
+    
+            span {
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                font-size: 1.2em;
+                text-align: left;
+            }
+    
+            input {
+                font-family: 'Lato', sans-serif;
+                padding: 0.5em;
+                font-size: 1em;
+                border-radius: 5px;
+                border: 1px solid rgba(193, 193, 195, 0.5);
+                outline: none;
+                transition: border 0.3s ease;
+    
+                &:focus {
+                    border-color: rgb(26, 4, 10);
+                }
+    
+                &::placeholder {
+                    color: rgba(193, 193, 195, 0.7);
+                }
+            }
+        }
+    
         button {
             font-family: 'Aboreto', cursive;
             font-weight: bolder;
-            font-size: 1.2em;
+            font-size: 1em;
             width: 100%;
             border-radius: 22px;
             color: rgb(26, 4, 10);
             background-color: #c1c1c3;
-            margin-bottom: 1.5em;
-        }
-    }
-  
-    .lista-productos {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-  
-        .producto {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            margin-bottom: 5px;
-            padding: 0.5em;
-            border-bottom: 1px solid rgba(193, 193, 195, 0.5);
-
-            img{
-                background: linear-gradient(209deg, rgb(193, 193, 195) 31%, rgb(255, 250, 251) 63%);
-                padding: 2px;
-                margin: 10px;
-                border: 1px solid black;
-            }
-
-            div{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                span {
-                    font-family: 'Lato', sans-serif;
-                    font-weight: 400;
-                    font-size: 1.2em;
-                }
-          
-                .subtotal {
-                    font-family: 'Montserrat', sans-serif;
-                }
-
-                button{
-                    width: 22%;
-                    align-self: flex-end;
-                }
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 0.5em;
+    
+            &:hover {
+                background-color: rgb(193, 193, 195);
             }
         }
-    }
-  
-    .total {
-      display: flex;
-      justify-content: space-between;
-      font-family: 'Lato', sans-serif;
-      font-size: 1.5em;
-      font-weight: bold;
-  
-      span {
-        font-family: 'Montserrat', sans-serif;
-      }
     }
 }
 
@@ -114,3 +192,19 @@ button {
     font-size: 2em;
     text-align: center;
 }
+
+.Toastify__toast {
+    background-color: #fffafb;
+    border: 1px solid rgba(193, 193, 195, 0.5);
+    /* ... otros estilos */
+  }
+  
+  .Toastify__toast--success {
+    background-color: #c1c1c3;
+    /* ... otros estilos */
+  }
+  
+  /* Estilos para el ícono de cerrar si decides usarlo */
+  .Toastify__close-button {
+    color: #fff;
+  }

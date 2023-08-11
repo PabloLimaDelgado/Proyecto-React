@@ -18,7 +18,7 @@ export const SearchBar = () => {
         searchRopa(busqueda.toLowerCase()).then((res) => {
             setResults(res);
         });
-
+    
         navigate(`/search/${busqueda}`);
         setBusqueda('');
     }

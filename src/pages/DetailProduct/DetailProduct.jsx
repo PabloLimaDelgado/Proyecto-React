@@ -36,6 +36,8 @@ export const DetailProduct = () => {
     const precioDescuento = ropa.price - (ropa.price * ropa.descuento / 100);
     return (
       <div className="DetailProduct">
+
+        <section className="section">
         <div className="divFotos">
           <img src={ropa.img}/>
         </div>
@@ -67,8 +69,10 @@ export const DetailProduct = () => {
           </p>
           </span>
 
+          <p className="stock-info">Ultimas piezas quedan, <p className="stock">¡{ropa.stock}!</p></p>
           <ItemCount stock={ropa.stock - (itemInCart?.(id)?.qty || 0)} onAdd={handleAdd}/>
         </div>
+        </section>
       </div>
     );
   };

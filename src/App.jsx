@@ -13,12 +13,11 @@ import { CartProvider } from "./state/Cart.context";
 import { ThemeProvider } from "./state/Theme.context";
 import { Cart } from "./pages/Cart/Cart";
 import { Search } from "./pages/Search/Search";
+import { Layout } from './components/Layout/Layout';
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<NavBar />}>
-      {" "}
-      {/* ROUTE padre necesita <Outlet /> */}
+    <Route element={<Layout />}>
       <Route path="/" element={<MainPage />} />
       <Route path="/item/:id" element={<DetailProduct />} />
       <Route path="/categoria/:id" element={<Category />} />
@@ -31,7 +30,7 @@ const routes = createBrowserRouter(
 
 function App() {
   return (
-    <div>
+    <div  className="app-container">
       <ThemeProvider>
         <CartProvider>
           <RouterProvider router={routes} />

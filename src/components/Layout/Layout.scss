@@ -1,0 +1,20 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+    > *:not(:first-child):not(:last-child) {
+        flex: 1;
+      }
+  }
