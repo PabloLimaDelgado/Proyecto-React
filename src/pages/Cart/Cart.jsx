@@ -69,14 +69,19 @@ export const Cart = () => {
 
   }
 
-  const areFieldsValid = () => {
-    return (
-      name.trim() !== "" &&
-      mail.trim() !== "" &&
-      mail2.trim() !== "" &&
-      mail === mail2
-    );
-  };
+    const isEmailValid = (email) => {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailRegex.test(email);
+    };
+
+    const areFieldsValid = () => {
+        return (
+            name.trim() !== "" &&
+            isEmailValid(mail) && 
+            mail.trim() !== "" &&
+            mail === mail2
+        );
+    };
 
   return (
     <div className="cart">
