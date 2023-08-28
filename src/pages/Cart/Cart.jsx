@@ -55,7 +55,7 @@ export const Cart = () => {
     setName("")
     setMail2("")
 
-    toast.success(`¡Gracias ${name}! Tu compra ha sido realizada.`, {
+    toast.success(`¡Gracias ${name}! Tu compra ha sido realizada. El id de tu compra es ${id}`, {
         autoClose: 3000, // 3 segundos
         hideProgressBar: true,
         closeOnClick: false,
@@ -63,9 +63,20 @@ export const Cart = () => {
         draggable: false,
     })
     await new Promise(resolve => setTimeout(resolve, 3000));  // Espera 3 segundos
+
+    cleanCart();
     navigate("/");
 
   }
+
+  const areFieldsValid = () => {
+    return (
+      name.trim() !== "" &&
+      mail.trim() !== "" &&
+      mail2.trim() !== "" &&
+      mail === mail2
+    );
+  };
 
   return (
     <div className="cart">
@@ -126,6 +137,7 @@ export const Cart = () => {
 
                     <button
                     onClick = {createOrder}
+                    disabled={!areFieldsValid()} 
                     >    
                         Realizar Pedido
                     </button>

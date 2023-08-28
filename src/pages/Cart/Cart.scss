@@ -148,6 +148,16 @@
             &:hover {
                 background-color: rgb(193, 193, 195);
             }
+
+            &:disabled {
+                background-color: #e0e0e0; 
+                color: #a0a0a0;            
+                cursor: not-allowed;     
+        
+                &:hover {
+                    background-color: #e0e0e0;
+                }
+            }
         }
     }
 }
